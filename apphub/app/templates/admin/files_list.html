@@ -1,0 +1,36 @@
+{% extends "_layout.html" %}
+{% block content %}
+  <div class="header">
+    <div>
+      <h1>Files</h1>
+      <p class="muted">Manage downloadable installers.</p>
+    </div>
+    <a class="button" href="{{ request.scope.root_path }}/admin/files/upload">Upload file</a>
+  </div>
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr><th>App</th><th>Version</th><th>Platform</th><th>Size</th><th>Downloads</th><th></th></tr>
+      </thead>
+      <tbody>
+        {% for file in files %}
+          <tr>
+            <td>{{ file.app_name }}</td>
+            <td>{{ file.version }}</td>
+            <td>{{ file.platform }} / {{ file.arch }}</td>
+            <td>{{ (file.size_bytes / 1024 / 1024) | round(2) }} MB</td>
+            <td>{{ file.download_count }}</td>
+            <td>
+              <form method="post" action="{{ request.scope.root_path }}/admin/files/{{ file.id }}/delete">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                <button class="button secondary" type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        {% else %}
+          <tr><td colspan="6">No files uploaded.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

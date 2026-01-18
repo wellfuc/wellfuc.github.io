@@ -1,0 +1,32 @@
+{% extends "_layout.html" %}
+{% block content %}
+  <div class="header">
+    <div>
+      <h1>Announcements</h1>
+      <p class="muted">Broadcast important updates.</p>
+    </div>
+    <a class="button" href="{{ request.scope.root_path }}/admin/announcements/new">New announcement</a>
+  </div>
+  <div class="card">
+    <table class="table">
+      <thead>
+        <tr><th>Title</th><th>Priority</th><th>Window</th><th></th></tr>
+      </thead>
+      <tbody>
+        {% for announcement in announcements %}
+          <tr>
+            <td>{{ announcement.title }}</td>
+            <td>{{ announcement.priority }}</td>
+            <td>
+              {{ announcement.starts_at.strftime('%Y-%m-%d') if announcement.starts_at else 'Now' }} -
+              {{ announcement.ends_at.strftime('%Y-%m-%d') if announcement.ends_at else 'Ongoing' }}
+            </td>
+            <td><a class="button secondary" href="{{ request.scope.root_path }}/admin/announcements/{{ announcement.id }}">Edit</a></td>
+          </tr>
+        {% else %}
+          <tr><td colspan="4">No announcements.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

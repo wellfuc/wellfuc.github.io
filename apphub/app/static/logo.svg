@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <rect width="40" height="40" rx="10" fill="#3751ff" />
+  <path d="M12 12h16v16H12z" fill="#ffffff" opacity="0.9" />
+  <path d="M18 18h8v2h-8zm0 5h8v2h-8z" fill="#3751ff" />
+  <text x="52" y="26" fill="#0f172a" font-size="18" font-family="Inter, sans-serif" font-weight="700">AppHub</text>
+</svg>

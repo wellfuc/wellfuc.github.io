@@ -1,0 +1,7 @@
+{% extends "_layout.html" %}
+{% block content %}
+  <div class="card">
+    <h1>Access denied</h1>
+    <p>{{ detail or 'You do not have access to this resource.' }}</p>
+  </div>
+{% endblock %}
