@@ -3,10 +3,6 @@ layout: default
 title: Home
 ---
 
-<div style="text-align: center; margin-bottom: 40px;">
-  <img src="https://github.com/wellfuc.png" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid #3498db;">
-</div>
-
 # Wellfuc
 
 Welcome to my personal GitHub page. I'm a developer working on various projects and exploring new technologies.
