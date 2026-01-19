@@ -1,34 +1,80 @@
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: #000;
+  color: #fff;
   line-height: 1.6;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .wrapper {
   max-width: 800px;
   margin: 0 auto;
   padding: 50px 30px;
-  background-color: white;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background-color: transparent;
   min-height: 100vh;
 }
 
 header {
   text-align: center;
   padding-bottom: 40px;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: 2px solid #333;
   margin-bottom: 50px;
+}
+
+header .profile-img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  background: transparent url("/assets/wellfuc.png") center / contain no-repeat;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  filter: drop-shadow(0 0 0 rgba(255,255,255,0));
+  animation: fadeIn 2.4s ease forwards,
+             glitch 12.11s linear infinite alternate;
+  -webkit-user-drag: none;
+  touch-action: none;
+  will-change: transform;
+  z-index: 1;
+}
+
+header .profile-img::before,
+header .profile-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/wellfuc.png") center / contain no-repeat;
+  border-radius: 50%;
+  opacity: 0.7;
+  will-change: clip-path, transform;
+  pointer-events: none;
+}
+
+header .profile-img::before {
+  transform: translateX(2px);
+  animation: glitchTop 2.73s linear infinite alternate;
+  animation-delay: -1.11s;
+  filter: drop-shadow(-2px 0 red);
+}
+
+header .profile-img::after {
+  transform: translateX(-2px);
+  animation: glitchBottom 5.07s linear infinite alternate;
+  animation-delay: -0.77s;
+  filter: drop-shadow(2px 0 cyan);
 }
 
 header h1 {
   margin: 0;
   font-size: 2.8em;
   font-weight: 300;
-  color: #2c3e50;
+  color: #fff;
   letter-spacing: -0.5px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
 header h1 a {
@@ -38,7 +84,7 @@ header h1 a {
 
 header p {
   margin: 15px 0 0 0;
-  color: #7f8c8d;
+  color: #ccc;
   font-size: 1.2em;
   font-weight: 300;
 }
@@ -48,11 +94,12 @@ section {
 }
 
 section h2 {
-  color: #34495e;
+  color: #fff;
   font-size: 1.8em;
   margin-bottom: 25px;
   font-weight: 400;
   position: relative;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3);
 }
 
 section h2::after {
@@ -62,12 +109,12 @@ section h2::after {
   left: 0;
   width: 50px;
   height: 2px;
-  background-color: #3498db;
+  background-color: #fff;
 }
 
 section p, section ul {
   margin-bottom: 25px;
-  color: #555;
+  color: #ccc;
   font-size: 1.05em;
 }
 
@@ -80,31 +127,65 @@ section li {
 }
 
 section a {
-  color: #3498db;
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
+  text-shadow: 0 0 3px rgba(255,255,255,0.5);
 }
 
 section a:hover {
-  color: #2980b9;
+  color: #00ffff;
   text-decoration: underline;
 }
 
 footer {
   text-align: center;
   padding-top: 40px;
-  border-top: 1px solid #e9ecef;
-  color: #7f8c8d;
+  border-top: 1px solid #333;
+  color: #666;
   font-size: 0.95em;
 }
 
 footer a {
-  color: #3498db;
+  color: #fff;
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Keyframes */
+@keyframes glitchTop {
+  0%   { clip-path: inset(2% 0 84% 0); }
+  12%  { clip-path: inset(10% 0 70% 0); }
+  24%  { clip-path: inset(20% 0 60% 0); }
+  36%  { clip-path: inset(30% 0 50% 0); }
+  60%  { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(6% 0 72% 0); }
+}
+
+@keyframes glitchBottom {
+  0%   { clip-path: inset(84% 0 2% 0); }
+  12%  { clip-path: inset(70% 0 10% 0); }
+  24%  { clip-path: inset(60% 0 20% 0); }
+  36%  { clip-path: inset(50% 0 30% 0); }
+  60%  { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(72% 0 6% 0); }
+}
+
+@keyframes glitch {
+  0%   { transform: translate3d(-1px,  1px, 0); }
+  20%  { transform: translate3d(-2px,  2px, 0); }
+  40%  { transform: translate3d(-2px, -2px, 0); }
+  60%  { transform: translate3d( 2px,  2px, 0); }
+  80%  { transform: translate3d( 2px, -2px, 0); }
+  100% { transform: translate3d( 1px, -1px, 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* Responsive design */
@@ -120,5 +201,11 @@ footer a:hover {
 
   section h2 {
     font-size: 1.5em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header .profile-img, header .profile-img::before, header .profile-img::after {
+    animation: none !important;
   }
 }
