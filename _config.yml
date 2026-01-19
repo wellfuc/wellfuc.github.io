@@ -1,0 +1,12 @@
+title: Wellfuc's GitHub Page
+description: Welcome to my GitHub page
+url: "https://wellfuc.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
