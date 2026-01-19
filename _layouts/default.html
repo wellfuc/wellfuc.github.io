@@ -15,7 +15,10 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><img src="/assets/wellfuc.png" alt="Wellfuc" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #3498db;"></h1>
+        <div style="text-align: center; margin-bottom: 20px;">
+          <img src="/assets/wellfuc.png" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid #3498db;">
+        </div>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
