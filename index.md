@@ -5,20 +5,20 @@ title: Home
 
 # Wellfuc
 
-This is my personal GitHub page. Here you can find information about my projects and work.
+Welcome to my personal GitHub page. I'm a developer working on various projects and exploring new technologies.
 
 ## About
 
-I'm a developer interested in coding and software development. I work on various projects and occasionally contribute to open source.
+I focus on software development, with interests in web applications, tools, and open source contributions. I enjoy solving problems through code and learning new frameworks and languages.
 
 ## Projects
 
-Some of my recent projects:
+Here are some of my projects:
 
-- [Project 1](https://github.com/wellfuc/project1)
-- [Project 2](https://github.com/wellfuc/project2)
+- [Project 1](https://github.com/wellfuc/project1) - Description of project 1
+- [Project 2](https://github.com/wellfuc/project2) - Description of project 2
 
-You can find more on my [GitHub profile](https://github.com/wellfuc).
+For more, visit my [GitHub profile](https://github.com/wellfuc).
 
 ## Contact
 
