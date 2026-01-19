@@ -66,6 +66,7 @@ header .profile-img::after {
 }
 
 header h1 {
+  display: hidden;
   margin: 0;
   font-size: 2.8em;
   font-weight: 300;
