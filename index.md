@@ -3,29 +3,23 @@ layout: default
 title: Home
 ---
 
-# Welcome to My GitHub Page
+# Wellfuc
 
-Hello! I'm Wellfuc, a passionate developer exploring the world of code, creativity, and open source. This is my personal corner on the web where I share my projects, thoughts, and experiments.
+This is my personal GitHub page. Here you can find information about my projects and work.
 
-## About Me
+## About
 
-I'm a developer who loves building things with code. Whether it's web applications, tools, or just fun experiments, I'm always excited to learn and create. When I'm not coding, you can find me exploring new technologies or contributing to open source projects.
+I'm a developer interested in coding and software development. I work on various projects and occasionally contribute to open source.
 
-## Featured Projects
+## Projects
 
-Here are some of my recent works:
+Some of my recent projects:
 
-- **[Project 1](https://github.com/wellfuc/project1)** - A cool web app that does amazing things.
-- **[Project 2](https://github.com/wellfuc/project2)** - An innovative tool for developers.
+- [Project 1](https://github.com/wellfuc/project1)
+- [Project 2](https://github.com/wellfuc/project2)
 
-Check out my [GitHub profile](https://github.com/wellfuc) for more repositories and contributions.
+You can find more on my [GitHub profile](https://github.com/wellfuc).
 
-## Get in Touch
+## Contact
 
-Feel free to reach out if you want to collaborate, have questions, or just say hi!
-
-- **Email**: your.email@example.com
-- **GitHub**: [wellfuc](https://github.com/wellfuc)
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/wellfuc)
-
-Thanks for visiting! 🚀
+- GitHub: [wellfuc](https://github.com/wellfuc)
