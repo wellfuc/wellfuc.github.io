@@ -25,7 +25,7 @@ header {
 header .profile-img {
   position: relative;
   width: 240px;
-  height: 120px;
+  height: 80px;
   margin: 0 auto 20px;
   background: transparent url("/assets/images/wellfuc.png") center / contain no-repeat;
   /*border-radius: 50%;*/
