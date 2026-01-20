@@ -1,0 +1,15 @@
+[Unit]
+Description=AppHub FastAPI service
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/apphub
+EnvironmentFile=/var/www/apphub/.env
+ExecStart=/var/www/apphub/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8010
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

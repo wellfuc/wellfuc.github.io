@@ -1,0 +1,21 @@
+{% extends "_layout.html" %}
+{% block content %}
+  <div class="header">
+    <div>
+      <h1>{{ 'Edit category' if category else 'New category' }}</h1>
+      <p class="muted">Sort order controls sidebar ordering.</p>
+    </div>
+  </div>
+  <form class="card" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+    <div class="form-row">
+      <label>Name
+        <input class="input" name="name" value="{{ category.name if category else '' }}" required />
+      </label>
+      <label>Sort order
+        <input class="input" type="number" name="sort_order" value="{{ category.sort_order if category else 0 }}" />
+      </label>
+    </div>
+    <button class="button" type="submit">Save</button>
+  </form>
+{% endblock %}

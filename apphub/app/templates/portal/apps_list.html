@@ -1,0 +1,38 @@
+{% extends "_layout.html" %}
+{% block content %}
+  <div class="header">
+    <div>
+      <h1>All Apps</h1>
+      <p class="muted">Search and filter the internal catalog.</p>
+    </div>
+  </div>
+
+  <form class="card" method="get">
+    <div class="form-row">
+      <input class="input" type="search" name="q" placeholder="Search apps" value="{{ query }}" />
+      <select class="select" name="category">
+        <option value="">All categories</option>
+        {% for category in categories %}
+          <option value="{{ category.slug }}" {% if category.slug == selected_category %}selected{% endif %}>{{ category.name }}</option>
+        {% endfor %}
+      </select>
+      <button class="button" type="submit">Search</button>
+    </div>
+  </form>
+
+  <div class="grid cols-3" style="margin-top: 20px;">
+    {% for app in apps %}
+      <a class="card" href="{{ request.scope.root_path }}/apps/{{ app.slug }}">
+        <h3>{{ app.name }}</h3>
+        <p class="muted">{{ app.description }}</p>
+        <div>
+          {% for tag in app.tags or [] %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </a>
+    {% else %}
+      <div class="card">No apps match your filters.</div>
+    {% endfor %}
+  </div>
+{% endblock %}
